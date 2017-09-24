@@ -6,24 +6,20 @@ public class InputDay {
     public static int inputDayNumber(){
 
         int dayNumber = 0;
-        boolean checkLoop = false;
 
         Scanner readDayNumber = new Scanner(System.in);
+
         do {
             System.out.println("Podaj numer dnia do wyświetlenia: ");
             dayNumber = readDayNumber.nextInt();
 
             if (dayNumber > 7 || dayNumber < 1) {
-                System.out.println("BLAD!!! Podaj numer z zakresu od 1-7");
-                checkLoop = false;
-
-            } else {
-                checkLoop = true;
+                System.out.println("BLAD!!! Numer który podałeś: "+dayNumber+" jest z poza zakresu 1-7, podaj prosze " +
+                        "jeszcze raz!");
             }
 
-        }while (!checkLoop);
+        }while ((dayNumber > 7 || dayNumber < 1));
 
-        return dayNumber - 1;
+        return dayNumber;
     }
-
 }
