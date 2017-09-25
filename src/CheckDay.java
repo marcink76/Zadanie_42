@@ -1,35 +1,36 @@
 public class CheckDay {
 
-    public static void checkDay(Day day){
+    public static void checkDay(){
+        String dayName = "";
         int dayNumber = InputDay.inputDayNumber();
         switch (dayNumber){
             case 1:
-                day.setDayName("Poniedziałek");
+                dayName = "Poniedziałek";
                 break;
             case 2:
-                day.setDayName("Wtorek");
+                dayName = "Wtorek";
                 break;
             case 3:
-                day.setDayName("Sroda");
+                dayName = "Sroda";
                 break;
             case 4:
-                day.setDayName("Czwartek");
+                dayName = "Czwartek";
                 break;
             case 5:
-                day.setDayName("Piątek");
+                dayName = "Piątek";
                 break;
             case 6:
-                day.setDayName("Sobota");
+                dayName = "Sobota";
                 break;
             case 7:
-                day.setDayName("Niedziela");
+                dayName = "Niedziela";
                 break;
         }
-        if (day.getDayName() == "Niedziela" || day.getDayName() == "Sobota"){
-            System.out.println("Wprowadziłeś numer dnia: "+ dayNumber +"\nto "+ day.getDayName() + " Dzie wolny od " +
+        if (dayName == "Niedziela" || dayName == "Sobota"){
+            System.out.println("Wprowadziłeś numer dnia: "+ dayNumber +"\nto "+ dayName + " Dzie wolny od " +
                     "pracy");
         }else
-            System.out.println("Wprowadziłeś numer dnia: "+ dayNumber +"\nto "+ day.getDayName() + ", więc do " +
+            System.out.println("Wprowadziłeś numer dnia: "+ dayNumber +"\nto "+ dayName + ", więc do " +
                     "roboty!!!");
         //return day;
     }
